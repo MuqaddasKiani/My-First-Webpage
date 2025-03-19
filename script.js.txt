@@ -1,0 +1,25 @@
+// Show an alert message when the page loads
+window.onload = function() {
+    alert("Welcome to my portfolio website!");
+};
+
+// Change background color of the page
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = "#e8f5e9";
+}
+
+// Form validation
+document.getElementById("contactForm").onsubmit = function(event) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("All fields are required. Please fill out the form completely.");
+        event.preventDefault(); // Prevent form submission
+        return false;
+    }
+
+    alert("Thank you for contacting me! I'll get back to you soon.");
+    return true;
+};
